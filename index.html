@@ -7,17 +7,23 @@
 </head>
 <body>
     
-    <header style="height:auto; width:100%; background-color: aqua; display: flex; justify-content: space-between;">
-        <div style="width:30%;">
-            <a href="./index.html"><img src="./img/img_hero.png" alt="" style="width: 100%; height:auto;" ></a>
+    <header >
+        <div style="height:auto; width:100%; background-color: aqua; display: flex; justify-content: space-between;">
+            <div style="width:30%;">
+                <a href="./index.html"><img src="./img/img_hero.png" alt="" style="width: 100%; height:auto;" ></a>
+            </div>
+            <div style="display: flex; justify-content: space-around; background-color: bisque; width:70%;  justify-content: flex-end; padding-right:20px;">
+                <ul style="display: flex; flex-direction:row; gap:30px;">
+                    <li><a href="./contact-form.html">資料請求</a></li>
+                    <li><a href="./index.html#faq">よくあるご質問</a></li>
+                    <li><a href="./index.html#service">サービス紹介</a></li>
+                    <li><a href="./contact-form.html">お問合せフォーム</a></li>
+                </ul>
+            </div>
         </div>
-        <div style="display: flex; justify-content: space-around; background-color: bisque; width:70%;  justify-content: flex-end; padding-right:20px;">
-            <ul style="display: flex; flex-direction:row; gap:30px;">
-                <li><a href="./contact-form.html">資料請求</a></li>
-                <li><a href="./index.html#faq">よくあるご質問</a></li>
-                <li><a href="./index.html#service">サービス紹介</a></li>
-                <li><a href="./contact-form.html">お問合せフォーム</a></li>
-            </ul>
+        <div class="fixed bottom-0 w-[100%] h-[60px] flex flex-row gap-4 justify-center">
+            <div class="bg-gray-700 text-white min-w-[45%]">資料請求</div>
+            <div class="bg-gray-700 text-white min-w-[45%]">ダウンロード</div>
         </div>
        
     </header>
@@ -196,7 +202,7 @@
         <div style="background-color: black;">
             <p style="color: white;" class="text-center py-5">&copy;2024 CORPORATION.</p>
         </div>
-        <div class="">フッターボタン</div>
+        <div class="w-[100%] h-[60px] bg-black">フッターボタン</div>
     </footer>
     <script src="https://cdn.tailwindcss.com"></script>
 </body>
