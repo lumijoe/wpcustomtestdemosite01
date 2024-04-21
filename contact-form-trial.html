@@ -3,35 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>-contact-form page</title>
+    <title>-contact-form-trial page</title>
+ <!-- style -->
+ <style>
+  /* ここにCSSを追加 */
+  .nav-bottom-button {
+      display: none; /* 最初は非表示にする */
+  }
+</style>
 </head>
 <body>
-    <!-- header -->
-    <header >
-      <div style="height:auto; width:100%; background-color: aqua; display: flex; justify-content: space-between;">
-          <div style="width:30%;">
-              <a href="./index.html"><img src="./img/img_hero.png" alt="" style="width: 100%; height:auto;" ></a>
-          </div>
-          <div style="display: flex; justify-content: space-around; background-color: bisque; width:70%;  justify-content: flex-end; padding-right:20px;">
-              <ul style="display: flex; flex-direction:row; gap:30px;">
-                  <li><a href="./contact-form.html">資料請求</a></li>
-                  <li><a href="./index.html#faq">よくあるご質問</a></li>
-                  <li><a href="./index.html#service">サービス紹介</a></li>
-                  <li><a href="./contact-form.html">お問合せフォーム</a></li>
-                  <li><a href="./contact-form-trial.html">無料トライアル</a></li>
-              </ul>
-          </div>
-      </div>
-      <div class="fixed bottom-0 w-[100%] h-[60px] flex flex-row gap-4 justify-center">
-          <div class="bg-gray-700 text-white min-w-[45%]">資料請求</div>
-          <div class="bg-gray-700 text-white min-w-[45%]">ダウンロード</div>
-      </div>
-     
-  </header>
 
+<header >
+  <div style="height:auto; width:100%; background-color: aqua; display: flex; justify-content: space-between;">
+      <div style="width:30%;">
+          <a href="./index.html"><img src="./img/img_hero.png" alt="" style="width: 100%; height:auto;" ></a>
+      </div>
+      <div style="display: flex; justify-content: space-around; background-color: bisque; width:70%;  justify-content: flex-end; padding-right:20px;">
+          <ul style="display: flex; flex-direction:row; gap:30px;">
+              <li><a href="./contact-form.html">資料請求</a></li>
+              <li><a href="./index.html#faq">よくあるご質問</a></li>
+              <li><a href="./index.html#service">サービス紹介</a></li>
+              <li><a href="./contact-form.html">お問合せフォーム</a></li>
+              <li><a href="./contact-form-trial.html">無料トライアル</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="fixed bottom-0 w-[100%] h-[60px] flex flex-row pb-[20px] gap-4 justify-center">
+  <!-- <div class="fixed bottom-0 w-[100%] h-[60px] flex flex-row pb-[20px] gap-4 justify-center nav-bottom-button" id="navBottomButton"> -->
+      <button class="bg-gray-700 text-white min-w-[180px] rounded-full nav-bottom-button" id="navBottomButton01"><a href="./contact-form.html" target="_blank" rel="noopener noreferrer">資料請求</a></button>
+      <button class="bg-gray-700 text-white min-w-[180px] rounded-full nav-bottom-button" id="navBottomButton02"><a href="./contact-form.html" target="_blank" rel="noopener noreferrer">無料トライアル</a></button>
+      
+  </div>
+ 
+</header>
     <!-- main -->
     <main>
-    <h1>contact-form page</h1>
+    <h1>contact-form-trial page/無料トライアル⚫️</h1>
     <form class="ml-14 mr-14">
         <div class="space-y-12">
           <div class="border-b border-gray-900/10 pb-12">
@@ -221,29 +229,43 @@
       </form>
     </main><br>
 
-     <!-- footer -->
+    <!-- footer -->
     <footer >
-        <div style="display: flex; flex-direction: row; height:300px; width: 100%; background-color:darkgray;">フッターです
-            <ul>
-                <li>左０１</li>
-                <li>左０１</li>
-                <li>左０１</li>
-                <li>左０１</li>
-                <li>左０１</li>
-                <li>左０１</li>
-            </ul>
-            <ul>
-                <li>右０１</li>
-                <li>右０１</li>
-                <li>右０１</li>
-                <li>右０１</li>
-            </ul>
-        </div>
-        <div style="background-color: black;">
-            <p style="color: white;" class="text-center py-5">&copy;2024 CORPORATION.</p>
-        </div>
-    </footer>
-    <script src="https://cdn.tailwindcss.com"></script>
+      <div style="display: flex; flex-direction: row; height:300px; width: 100%; background-color:darkgray;">フッターです
+          <ul>
+              <li>左０１</li>
+              <li>左０１</li>
+              <li>左０１</li>
+              <li>左０１</li>
+              <li>左０１</li>
+              <li>左０１</li>
+          </ul>
+          <ul>
+              <li>右０１</li>
+              <li>右０１</li>
+              <li>右０１</li>
+              <li>右０１</li>
+          </ul>
+      </div>
+      <div style="background-color: black;">
+          <p style="color: white;" class="text-center py-5">&copy;2024 CORPORATION.</p>
+      </div>
+      <div class="w-[100%] h-[60px] bg-black">フッターボタン</div>
+  </footer>
+  <script>
+      // スクロールイベントを監視してボタンを表示するかどうかを判断する
+      window.addEventListener('scroll', function() {
+          var navBottomButtons = document.querySelectorAll('.nav-bottom-button');
+          navBottomButtons.forEach(function(button) {
+              if (window.scrollY > 250) { // スクロールが250pxを超えたら
+                  button.style.display = 'block'; // ボタンを表示する
+              } else {
+                  button.style.display = 'none'; // それ以外は非表示にする
+              }
+          });
+      });
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
-

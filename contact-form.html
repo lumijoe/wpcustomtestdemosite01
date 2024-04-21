@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>-contact-form page</title>
+    <style>
+        /* ここにCSSを追加 */
+        .nav-bottom-button {
+            display: none; /* 最初は非表示にする */
+        }
+    </style>
 </head>
 <body>
     <!-- header -->
@@ -22,16 +28,18 @@
                 </ul>
             </div>
         </div>
-        <div class="fixed bottom-0 w-[100%] h-[60px] flex flex-row gap-4 justify-center">
-            <div class="bg-gray-700 text-white min-w-[45%]">資料請求</div>
-            <div class="bg-gray-700 text-white min-w-[45%]">ダウンロード</div>
+        <div class="fixed bottom-0 w-[100%] h-[60px] flex flex-row pb-[20px] gap-4 justify-center">
+        <!-- <div class="fixed bottom-0 w-[100%] h-[60px] flex flex-row pb-[20px] gap-4 justify-center nav-bottom-button" id="navBottomButton"> -->
+            <button class="bg-gray-700 text-white min-w-[180px] rounded-full nav-bottom-button" id="navBottomButton01"><a href="./contact-form.html" target="_blank" rel="noopener noreferrer">資料請求</a></button>
+            <button class="bg-gray-700 text-white min-w-[180px] rounded-full nav-bottom-button" id="navBottomButton02"><a href="./contact-form.html" target="_blank" rel="noopener noreferrer">無料トライアル</a></button>
+            
         </div>
        
     </header>
 
     <!-- main -->
     <main>
-    <h1>contact-form page</h1>
+    <h1>contact-form page/資料請求⚫️</h1>
     <form class="ml-14 mr-14">
         <div class="space-y-12">
           <div class="border-b border-gray-900/10 pb-12">
@@ -242,8 +250,22 @@
         <div style="background-color: black;">
             <p style="color: white;" class="text-center py-5">&copy;2024 CORPORATION.</p>
         </div>
+        <div class="w-[100%] h-[60px] bg-black">フッターボタン</div>
     </footer>
+    <script>
+        // スクロールイベントを監視してボタンを表示するかどうかを判断する
+        window.addEventListener('scroll', function() {
+            var navBottomButtons = document.querySelectorAll('.nav-bottom-button');
+            navBottomButtons.forEach(function(button) {
+                if (window.scrollY > 250) { // スクロールが250pxを超えたら
+                    button.style.display = 'block'; // ボタンを表示する
+                } else {
+                    button.style.display = 'none'; // それ以外は非表示にする
+                }
+            });
+        });
+    </script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
-
