@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wpcustomtestdemosite01(カスタムテーマhtml)</title>
+    <!-- style -->
+    <style>
+        /* ここにCSSを追加 */
+        .nav-bottom-button {
+            display: none; /* 最初は非表示にする */
+        }
+    </style>
 </head>
 <body>
     
@@ -23,8 +30,9 @@
             </div>
         </div>
         <div class="fixed bottom-0 w-[100%] h-[60px] flex flex-row pb-[20px] gap-4 justify-center">
-            <button class="bg-gray-700 text-white min-w-[180px] rounded-full"><a href="./contact-form.html" target="_blank" rel="noopener noreferrer">資料請求</a></button>
-            <button class="bg-gray-700 text-white min-w-[180px] rounded-full"><a href="./contact-form.html" target="_blank" rel="noopener noreferrer">無料トライアル</a></button>
+        <!-- <div class="fixed bottom-0 w-[100%] h-[60px] flex flex-row pb-[20px] gap-4 justify-center nav-bottom-button" id="navBottomButton"> -->
+            <button class="bg-gray-700 text-white min-w-[180px] rounded-full nav-bottom-button" id="navBottomButton01"><a href="./contact-form.html" target="_blank" rel="noopener noreferrer">資料請求</a></button>
+            <button class="bg-gray-700 text-white min-w-[180px] rounded-full nav-bottom-button" id="navBottomButton02"><a href="./contact-form.html" target="_blank" rel="noopener noreferrer">無料トライアル</a></button>
             
         </div>
        
@@ -206,6 +214,20 @@
         </div>
         <div class="w-[100%] h-[60px] bg-black">フッターボタン</div>
     </footer>
+    <script>
+        // スクロールイベントを監視してボタンを表示するかどうかを判断する
+        window.addEventListener('scroll', function() {
+            var navBottomButtons = document.querySelectorAll('.nav-bottom-button');
+            navBottomButtons.forEach(function(button) {
+                if (window.scrollY > 250) { // スクロールが250pxを超えたら
+                    button.style.display = 'block'; // ボタンを表示する
+                } else {
+                    button.style.display = 'none'; // それ以外は非表示にする
+                }
+            });
+        });
+    </script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
