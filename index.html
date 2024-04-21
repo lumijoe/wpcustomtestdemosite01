@@ -11,6 +11,8 @@
             display: none; /* 最初は非表示にする */
         }
     </style>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     
@@ -59,7 +61,7 @@
         <!-- よくあるご質問 -->
         <div style="background-color: aqua;">
             <div class="p-[5%]">
-        <h1 id="faq">よくあるご質問</h1>
+        <h1 id="faq" class="text80">よくあるご質問</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro consectetur explicabo totam debitis, ipsam, et quidem doloribus expedita eligendi magnam atque odio, dolorum aspernatur dolorem sequi illum saepe quisquam velit.
         Adipisci, aspernatur unde optio illo est dolor itaque ad assumenda. Distinctio, quibusdam sint quo, provident error praesentium officia temporibus asperiores at suscipit laborum ducimus aliquam eos deleniti nisi fugit sunt!
         Quod sunt blanditiis dolor obcaecati eligendi illo temporibus ipsam, accusamus facilis, enim harum eaque quidem saepe consectetur commodi, totam doloribus numquam architecto aut cupiditate sed maiores similique voluptate? Et, sequi.
@@ -82,7 +84,7 @@
         <!-- サービス -->
         <div style="background-color: antiquewhite;">
             <div class="p-[5%]">
-        <h1 id="service">サービス紹介</h1>
+        <h1 id="service" class="text80">サービス紹介</h1>
         <img src="./img/img_02.jpg" alt="" srcset="" style="width:100vw; height:auto;">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi alias libero, molestias iusto quo aliquid fugit dolorem omnis esse eos praesentium quae ab neque modi et dolore itaque eveniet sint?
         Ut recusandae consectetur repellendus est modi aut adipisci nam ipsa ipsam omnis, esse dolores incidunt totam quos velit provident, fugit ea in? Dolorum impedit architecto aut ducimus rerum, facere porro?
@@ -98,8 +100,8 @@
         <br><br>
 
         <!-- 製品紹介 -->
-        <div style="display: flex; flex-direction: row; gap:10px; justify-content: center;">
-            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+        <div style="display: flex; flex-direction: row; gap:10px; justify-content: center;" class="text80">
+            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ">
                 <img class="w-full" src="./img/img_04.png" alt="Sunset in the mountains">
                 <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
@@ -169,7 +171,7 @@
         
         <!-- 導入実績企業 -->
         <h1 class="text-center">導入実績</h1>
-        <div class="w-[80%] h-auto grid grid-cols-4 mx-[10%] gap-4 my-[5%]">
+        <div class="w-[80%] h-auto grid grid-cols-4 mx-[10%] gap-4 my-[5%] text80">
             <img src="./img/img_corplogo.png" alt="">
             <img src="./img/img_corplogo.png" alt="">
             <img src="./img/img_corplogo.png" alt="">
@@ -227,7 +229,7 @@
             });
         });
     </script>
-    
+    <script src="./js/script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
